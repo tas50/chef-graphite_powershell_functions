@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Graphite>
+    <CarbonServer><%= node['graphite_powershell_functions']['CarbonServer'] -%></CarbonServer>
+    <CarbonServerPort><%= node['graphite_powershell_functions']['CarbonServerPort'] -%></CarbonServerPort>
+    <MetricPath><%= node['graphite_powershell_functions']['MetricPath'].gsub(/.$/, '') -%></MetricPath>
+    <MetricSendIntervalSeconds><%= node['graphite_powershell_functions']['MetricSendIntervalSeconds'] -%></MetricSendIntervalSeconds>
+    <TimeZoneOfGraphiteServer><%= node['graphite_powershell_functions']['TimeZoneOfGraphiteServer'] -%></TimeZoneOfGraphiteServer>
+    <Hostname><%= node.fqdn -%></Hostname>
+  </Graphite>
+  <PerformanceCounters>
+<% node['graphite_powershell_functions']['PerformanceCounters'].each do |counter| -%>
+    <Counter Name="\<%= counter -%>"/>
+<% end -%>
+  </PerformanceCounters>
+  <Filtering>
+<% node['graphite_powershell_functions']['MetricFilter'].each do |filter| -%>
+    <MetricFilter Name="<%= filter -%>"/>
+<% end -%>
+  </Filtering>
+  <Logging>
+    <VerboseOutput>True</VerboseOutput>
+  </Logging>
+</Configuration>
