@@ -48,7 +48,7 @@ powershell_script 'Install GraphitePowerShell Service' do
   not_if { `C:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe Get-Service -Name GraphitePowerShell` }
 end
 
-service "GraphitePowerShell" do
+service 'GraphitePowerShell' do
   supports :status => true, :restart => true
-  action [ :enable, :start ]
+  action [:enable, :start]
 end

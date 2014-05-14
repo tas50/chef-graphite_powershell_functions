@@ -21,24 +21,24 @@ default['graphite_powershell_functions']['MetricPath'] = node['collectd']['graph
 default['graphite_powershell_functions']['MetricSendIntervalSeconds'] = 15
 default['graphite_powershell_functions']['TimeZoneOfGraphiteServer'] = 'UTC'
 default['graphite_powershell_functions']['PerformanceCounters'] = [
-    'Network Interface(*)\Bytes Received/sec',
-    'Network Interface(*)\Bytes Sent/sec',
-    'Network Interface(*)\Packets Received Unicast/sec',
-    'Network Interface(*)\Packets Sent Unicast/sec',
-    'Network Interface(*)\Packets Received Non-Unicast/sec',
-    'Network Interface(*)\Packets Sent Non-Unicast/sec',
-    'Processor(_Total)\% Processor Time',
-    'Memory\Available MBytes',
-    'Memory\Pages/sec',
-    'Memory\Pages Input/sec',
-    'System\Processor Queue Length',
-    'System\Threads',
-    'PhysicalDisk(*)\Avg. Disk Write Queue Length',
-    'PhysicalDisk(*)\Avg. Disk Read Queue Length'
+  'Network Interface(*)\Bytes Received/sec',
+  'Network Interface(*)\Bytes Sent/sec',
+  'Network Interface(*)\Packets Received Unicast/sec',
+  'Network Interface(*)\Packets Sent Unicast/sec',
+  'Network Interface(*)\Packets Received Non-Unicast/sec',
+  'Network Interface(*)\Packets Sent Non-Unicast/sec',
+  'Processor(_Total)\% Processor Time',
+  'Memory\Available MBytes',
+  'Memory\Pages/sec',
+  'Memory\Pages Input/sec',
+  'System\Processor Queue Length',
+  'System\Threads',
+  'PhysicalDisk(*)\Avg. Disk Write Queue Length',
+  'PhysicalDisk(*)\Avg. Disk Read Queue Length'
 ]
 default['graphite_powershell_functions']['MetricFilter'] = [
-    'isatap',
-    'teredo tunneling'
+  'isatap',
+  'teredo tunneling'
 ]
 
 default['graphite_powershell_functions']['nssm_archive'] = 'http://nssm.cc/release/nssm-2.21.1.zip'
