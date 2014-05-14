@@ -6,3 +6,4 @@ description      'Configures the Graphite PowerShell Functions script to send Wi
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '1.0.0'
 supports         'windows'
+depends          'windows'
