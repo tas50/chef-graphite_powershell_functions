@@ -167,8 +167,15 @@ Function ConvertTo-GraphiteMetric
    [switch]$NicePhysicalDisks
   )
 
+  $cleanNameOfSample = $MetricToClean
+  # replace system name with the config file defined hostname if defined
+  if ($Config.Hostname)
+  {
+    $cleanNameOfSample = $cleanNameOfSample -replace [System.Net.Dns]::GetHostName(), $Config.Hostname
+  }
+
   # Removing Beginning Backslashes"
-  $cleanNameOfSample = $MetricToClean -replace '^\\\\', ''
+  $cleanNameOfSample = $cleanNameOfSample -replace '^\\\\', ''
 
   # Replacing Backslashes After ServerName With dot"
   $cleanNameOfSample = $cleanNameOfSample -replace '\\\\', '.'
@@ -440,13 +447,13 @@ Function Import-XMLConfig
         WEBSITE:   http://www.hodgkins.net.au
 
 #>
-   [CmdletBinding()]
-   Param
-   (
+  [CmdletBinding()]
+  Param
+  (
     # Configuration File Path
     [Parameter(Mandatory=$true)]
     $ConfigPath
-   )
+  )
 
   [hashtable]$Config = @{}
 
@@ -467,8 +474,13 @@ Function Import-XMLConfig
   $Config.MetricTimeSpan = [timespan]::FromSeconds($Config.MetricSendIntervalSeconds)
 
   # What is the metric path
-
   $Config.MetricPath = $xmlfile.Configuration.Graphite.MetricPath
+
+  # if hostname is defined allow an override hostname vs. using system name
+  if ($xmlfile.Configuration.Graphite.Hostname)
+  {
+    $Config.Hostname = $xmlfile.Configuration.Graphite.Hostname
+  }
 
   # Convert Value in Configuration File to Bool for showing Verbose Output
   [bool]$Config.ShowOutput = [System.Convert]::ToBoolean($xmlfile.Configuration.Logging.VerboseOutput)

@@ -6,7 +6,7 @@
     <MetricPath><%= node['graphite_powershell_functions']['MetricPath'].gsub(/.$/, '') -%></MetricPath>
     <MetricSendIntervalSeconds><%= node['graphite_powershell_functions']['MetricSendIntervalSeconds'] -%></MetricSendIntervalSeconds>
     <TimeZoneOfGraphiteServer><%= node['graphite_powershell_functions']['TimeZoneOfGraphiteServer'] -%></TimeZoneOfGraphiteServer>
-    <Hostname><%= node.fqdn -%></Hostname>
+    <Hostname><%= node['graphite_powershell_functions']['hostname'] -%></Hostname>
   </Graphite>
   <PerformanceCounters>
 <% node['graphite_powershell_functions']['PerformanceCounters'].each do |counter| -%>
