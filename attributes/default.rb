@@ -29,13 +29,20 @@ default['graphite_powershell_functions']['PerformanceCounters'] = [
   'Network Interface(*)\Packets Received Non-Unicast/sec',
   'Network Interface(*)\Packets Sent Non-Unicast/sec',
   'Processor(_Total)\% Processor Time',
+  'Processor(_Total)\% User Time',
+  'Processor(_Total)\% Idle Time',
   'Memory\Available MBytes',
   'Memory\Pages/sec',
   'Memory\Pages Input/sec',
   'System\Processor Queue Length',
   'System\Threads',
+  'System\File Write Operations/sec',
+  'System\File Read Operations/sec',
   'PhysicalDisk(*)\Avg. Disk Write Queue Length',
-  'PhysicalDisk(*)\Avg. Disk Read Queue Length'
+  'PhysicalDisk(*)\Avg. Disk Read Queue Length',
+  'TCPv4\Segments Received/sec',
+  'TCPv4\Segments Sent/sec',
+  'TCPv4\Segments Retransmitted/sec'
 ]
 default['graphite_powershell_functions']['MetricFilter'] = [
   'isatap',
