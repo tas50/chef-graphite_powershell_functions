@@ -10,6 +10,7 @@ v1.1.0
 - Switch the default update time period from every 15 seconds to every 30 seconds
 - Add additional tests and update the test harness
 - Fix an incorrect license in the default recipe file
+- Restart the service when the config file or Powershell script is updated
 
 
 v1.0.0
