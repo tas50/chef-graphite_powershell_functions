@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'strainer'
-gem 'berkshelf',  '~> 2.0.14'
-gem 'chefspec',   '~> 3.4.0'
-gem 'foodcritic', '~> 3.0.3'
-gem 'rubocop',    '0.21'
+gem 'berkshelf',  '~> 3.1.0'
+gem 'chefspec',   '~> 4.0.0'
+gem 'foodcritic', '~> 4.0.0'
+gem 'rubocop',    '0.24.1'

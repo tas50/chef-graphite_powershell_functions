@@ -20,7 +20,7 @@ default['graphite_powershell_functions']['CarbonServerPort'] = node['collectd'][
 default['graphite_powershell_functions']['MetricPath'] = node['collectd']['graphite']['prefix']
 default['graphite_powershell_functions']['MetricSendIntervalSeconds'] = 15
 default['graphite_powershell_functions']['TimeZoneOfGraphiteServer'] = 'UTC'
-default['graphite_powershell_functions']['hostname'] = node.fqdn.gsub('.', '_')
+default['graphite_powershell_functions']['hostname'] = node.name.gsub('.', '_')
 default['graphite_powershell_functions']['PerformanceCounters'] = [
   'Network Interface(*)\Bytes Received/sec',
   'Network Interface(*)\Bytes Sent/sec',
