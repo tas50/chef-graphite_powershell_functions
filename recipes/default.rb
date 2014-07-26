@@ -33,6 +33,7 @@ end
 # create the high level attribute to house our various node attributes
 template 'C:\GraphitePowershellFunctions\StatsToGraphiteConfig.xml' do
   source 'StatsToGraphiteConfig.xml.erb'
+  notifies :restart, 'service[GraphitePowerShell]'
 end
 
 # download the Non-Sucking Service Manager zip file
