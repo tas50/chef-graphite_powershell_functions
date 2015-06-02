@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'graphite_powershell_functions::default' do
   let(:chef_run) do
     ChefSpec::Runner.new(platform: 'Windows', version: '2008R2') do |node|
-      node.set['collectd']['graphite']['host'] = 'graphite.therealtimsmith.com'
-      node.set['collectd']['graphite']['port'] = 2003
-      node.set['collectd']['graphite']['prefix'] = 'servers.prod.'
+      node.set['graphite_powershell_functions']['CarbonServer'] = 'graphite.therealtimsmith.com'
+      node.set['graphite_powershell_functions']['CarbonServerPort'] = 2003
+      node.set['graphite_powershell_functions']['MetricPath'] = 'servers.prod.'
     end.converge(described_recipe)
   end
   subject { chef_run }

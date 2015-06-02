@@ -11,11 +11,11 @@ Requirements
 Attributes
 ==========
 
-* `default['graphite_powershell_functions']['CarbonServer']` FQDN of the carbon host.  Defaults to the node attribute used by the collectd cookbook
-* `default['graphite_powershell_functions']['CarbonServerPort']` port of the carbon host.  Defaults to the node attribute used by the collectd cookbook
-* `default['graphite_powershell_functions']['MetricPath']` Path to prefix on the collected metrics.  Defaults to the node attribute used by the collectd cookbook
-* `default['graphite_powershell_functions']['MetricSendIntervalSeconds']` Interval to grab metrics.  Default to 15
-* `default['graphite_powershell_functions']['TimeZoneOfGraphiteServer']` Timezone of the Graphite server.  Defaults to UTC
+* `default['graphite_powershell_functions']['CarbonServer']` FQDN of the carbon host.  **Required**
+* `default['graphite_powershell_functions']['CarbonServerPort']` port of the carbon host (default: `2003`).
+* `default['graphite_powershell_functions']['MetricPath']` Path to prefix on the collected metrics (default: `powershell.`).
+* `default['graphite_powershell_functions']['MetricSendIntervalSeconds']` Interval to grab metrics (default: 30).
+* `default['graphite_powershell_functions']['TimeZoneOfGraphiteServer']` Timezone of the Graphite server (default `UTC`).
 * `default['graphite_powershell_functions']['PerformanceCounters']` Array of performance counters to collect
 * `default['graphite_powershell_functions']['MetricFilter']` Array of Metrics to filter
 * `default['graphite_powershell_functions']['nssm_archive']` URL of the Non-Sucky Service Manager zip archive
