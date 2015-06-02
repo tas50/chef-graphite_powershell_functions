@@ -15,9 +15,9 @@
 # limitations under the License.
 #
 
-default['graphite_powershell_functions']['CarbonServer'] = node['collectd']['graphite']['host']
-default['graphite_powershell_functions']['CarbonServerPort'] = node['collectd']['graphite']['port']
-default['graphite_powershell_functions']['MetricPath'] = node['collectd']['graphite']['prefix']
+default['graphite_powershell_functions']['CarbonServer'] = nil
+default['graphite_powershell_functions']['CarbonServerPort'] = 2003
+default['graphite_powershell_functions']['MetricPath'] = 'powershell.'
 default['graphite_powershell_functions']['MetricSendIntervalSeconds'] = 30
 default['graphite_powershell_functions']['TimeZoneOfGraphiteServer'] = 'UTC'
 default['graphite_powershell_functions']['hostname'] = node.name.gsub('.', '_')
