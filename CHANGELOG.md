@@ -1,6 +1,6 @@
 chef-graphite_powershell_functions Cookbook CHANGELOG
 =====================================================
-This file is used to list changes made in each version of the nagios cookbook.
+This file is used to list changes made in each version of the graphite_powershell_functions cookbook.
 
 v1.1.0
 ------
