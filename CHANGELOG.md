@@ -2,6 +2,14 @@
 
 This file is used to list changes made in each version of the graphite_powershell_functions cookbook.
 
+## v1.2.1
+
+- Update Travis tests to run in ChefDK
+- Replace rubocop with cookstyle for preset rules
+- Resolve cookstyle warnings
+- Update the readme to include required chef release and cookbook depedencies and to include travis and cookbook version badges
+- Add chef_version, issues_url and source_url to the metadata
+
 ## v1.2.0
 
 - Add travis.yml for testing
