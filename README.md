@@ -6,11 +6,13 @@ A cookbook to install the Graphite PowerShell Function (<https://github.com/Matt
 
 ## Requirements
 
-- Windows
-
 ### Chef
 
 - Chef 11+
+
+### Platforms
+
+- Windows
 
 ### Cookbooks
 
