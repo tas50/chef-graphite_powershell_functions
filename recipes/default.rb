@@ -62,6 +62,6 @@ powershell_script 'Install GraphitePowerShell Service' do
 end
 
 service 'GraphitePowerShell' do
-  supports :status => true, :restart => true
+  supports status: true, restart: true
   action [:enable, :start]
 end
