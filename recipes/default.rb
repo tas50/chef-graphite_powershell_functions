@@ -55,7 +55,7 @@ end
 
 powershell_script 'Install GraphitePowerShell Service' do
   code <<-EOH
-    Start-Process -FilePath #{node['graphite_powershell_functions']['install_dir']}\\nssm\\current\\win64\\nssm.exe -ArgumentList 'install GraphitePowerShell "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" "-command "& { . #{node['graphite_powershell_functions']['install_dir']}\\Graphite-PowerShell.ps1; Start-StatsToGraphite }"" ' -NoNewWindow -Wait
+    Start-Process -FilePath #{node['graphite_powershell_functions']['install_dir']}\\nssm\\current\\win64\\nssm.exe -ArgumentList 'install GraphitePowerShell "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" "-command "& { . #{node['graphite_powershell_functions']['install_dir']}\\#{node['graphite_powershell_functions']['main_script']}; #{node['graphite_powershell_functions']['main_method']} }"" ' -NoNewWindow -Wait
   EOH
   action :run
   not_if 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe -NoLogo -NonInteractive -NoProfile -ExecutionPolicy RemoteSigned Get-Service -Name GraphitePowerShell'

@@ -53,3 +53,5 @@ default['graphite_powershell_functions']['nssm_archive'] = 'https://nssm.cc/rele
 default['graphite_powershell_functions']['nssm_archive_checksum'] = '727d1e42275c605e0f04aba98095c38a8e1e46def453cdffce42869428aa6743'
 
 default['graphite_powershell_functions']['install_dir'] = 'C:\GraphitePowershellFunctions'
+default['graphite_powershell_functions']['main_script'] = 'Graphite-PowerShell.ps1'
+default['graphite_powershell_functions']['main_method'] = 'Start-StatsToGraphite'
