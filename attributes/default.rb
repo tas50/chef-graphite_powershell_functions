@@ -51,3 +51,5 @@ default['graphite_powershell_functions']['MetricFilter'] = [
 
 default['graphite_powershell_functions']['nssm_archive'] = 'http://nssm.cc/release/nssm-2.21.1.zip'
 default['graphite_powershell_functions']['nssm_archive_checksum'] = 'ba1d2765d91a950eedff161e772e7a744a6896aba68967494fee1fb084ab081f'
+
+default['graphite_powershell_functions']['install_dir'] = 'C:\GraphitePowershellFunctions'
