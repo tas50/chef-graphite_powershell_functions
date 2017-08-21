@@ -42,11 +42,11 @@ default['graphite_powershell_functions']['PerformanceCounters'] = [
   'PhysicalDisk(*)\Avg. Disk Read Queue Length',
   'TCPv4\Segments Received/sec',
   'TCPv4\Segments Sent/sec',
-  'TCPv4\Segments Retransmitted/sec'
+  'TCPv4\Segments Retransmitted/sec',
 ]
 default['graphite_powershell_functions']['MetricFilter'] = [
   'isatap',
-  'teredo tunneling'
+  'teredo tunneling',
 ]
 
 default['graphite_powershell_functions']['nssm_archive'] = 'http://nssm.cc/release/nssm-2.21.1.zip'
