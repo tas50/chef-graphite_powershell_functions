@@ -2,6 +2,15 @@
 
 This file is used to list changes made in each version of the graphite_powershell_functions cookbook.
 
+## v2.0.0
+
+- Require Chef 12.1 or later as Chef 11 is now EOL
+- Add a new attribute `node['graphite_powershell_functions']['install_dir']` to control the install directory
+- Update NSSM to 2.24
+- Add new attributes `node['graphite_powershell_functions']['main_script']` and `node['graphite_powershell_functions']['main_method']` to control the execution of the script
+- Add new attributes `node['graphite_powershell_functions']['service_name']` and `node['graphite_powershell_functions']['service_description']` to control the service
+- Updated the license to be a SPDX compliant string in metadata.rb
+
 ## v1.2.1
 
 - Update Travis tests to run in ChefDK
