@@ -42,12 +42,19 @@ default['graphite_powershell_functions']['PerformanceCounters'] = [
   'PhysicalDisk(*)\Avg. Disk Read Queue Length',
   'TCPv4\Segments Received/sec',
   'TCPv4\Segments Sent/sec',
-  'TCPv4\Segments Retransmitted/sec'
+  'TCPv4\Segments Retransmitted/sec',
 ]
 default['graphite_powershell_functions']['MetricFilter'] = [
   'isatap',
-  'teredo tunneling'
+  'teredo tunneling',
 ]
 
-default['graphite_powershell_functions']['nssm_archive'] = 'http://nssm.cc/release/nssm-2.21.1.zip'
-default['graphite_powershell_functions']['nssm_archive_checksum'] = 'ba1d2765d91a950eedff161e772e7a744a6896aba68967494fee1fb084ab081f'
+default['graphite_powershell_functions']['nssm_archive'] = 'https://nssm.cc/release/nssm-2.24.zip'
+default['graphite_powershell_functions']['nssm_archive_checksum'] = '727d1e42275c605e0f04aba98095c38a8e1e46def453cdffce42869428aa6743'
+
+default['graphite_powershell_functions']['service_name'] = 'GraphitePowerShell'
+default['graphite_powershell_functions']['service_description'] = 'Send metrics to graphite (carbon) using PowerShell'
+
+default['graphite_powershell_functions']['install_dir'] = 'C:\GraphitePowershellFunctions'
+default['graphite_powershell_functions']['main_script'] = 'Graphite-PowerShell.ps1'
+default['graphite_powershell_functions']['main_method'] = 'Start-StatsToGraphite'

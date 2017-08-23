@@ -29,6 +29,9 @@ A cookbook to install the Graphite PowerShell Function (<https://github.com/Matt
 - `default['graphite_powershell_functions']['MetricFilter']` Array of Metrics to filter
 - `default['graphite_powershell_functions']['nssm_archive']` URL of the Non-Sucky Service Manager zip archive
 - `default['graphite_powershell_functions']['nssm_archive_checksum']` shasum for the zip archive
+- `default['graphite_powershell_functions']['install_dir']` directory to install to
+- `default['graphite_powershell_functions']['service_name']` name of the service
+- `default['graphite_powershell_functions']['service_description'] description of the service
 
 ## License & Authors
 
