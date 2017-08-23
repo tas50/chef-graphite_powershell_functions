@@ -7,7 +7,7 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '1.2.1'
 supports         'windows'
 depends          'windows'
-source_url 'https://github.com/tas50/chef-graphite_powershell_functions' if respond_to?(:source_url)
-issues_url 'https://github.com/tas50/chef-graphite_powershell_functions/issues' if respond_to?(:issues_url)
+source_url 'https://github.com/tas50/chef-graphite_powershell_functions'
+issues_url 'https://github.com/tas50/chef-graphite_powershell_functions/issues'
 
-chef_version '>= 11.0' if respond_to?(:chef_version)
+chef_version '>= 12.1' if respond_to?(:chef_version)

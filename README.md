@@ -2,13 +2,13 @@
 
 [![Build Status](https://travis-ci.org/tas50/chef-graphite_powershell_functions.svg?branch=master)](https://travis-ci.org/tas50/chef-graphite_powershell_functions) [![Cookbook Version](https://img.shields.io/cookbook/v/tomcat.svg)](https://supermarket.chef.io/cookbooks/graphite_powershell_functions)
 
-A cookbook to install the Graphite PowerShell Function (<https://github.com/MattHodge/Graphite-PowerShell-Functions>) script using Chef. Sets up the script as a Windows service using the Non-Sucky Service Manager (<http://nssm.cc/>) as outlined in Matt Hodge's documentation for Graphite Powershell Functions.
+A cookbook to install the Graphite PowerShell Function (<https://github.com/MattHodge/Graphite-PowerShell-Functions>) script using Chef. Sets up the script as a Windows service using the Non-Sucky Service Manager (<http://nssm.cc/>) as outlined in Matt Hodge's documentation for Graphite PowerShell Functions.
 
 ## Requirements
 
 ### Chef
 
-- Chef 11+
+- Chef 12.1+
 
 ### Platforms
 
